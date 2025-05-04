@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/png">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Tailwind CSS cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eater&family=Fontdiner+Swanky&family=Henny+Penny&family=Zeyada&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- Offer Banner -->
+
+    <div class="flex justify-center items-center text-white p-1 text-center"
+        style="background-color: #1d232c;font-size: 1.5vw;font-family: Poppins, sans-serif;" id="offerBar">
+
+        <p class="flashing-text font-sans">Sign Up and <b>GET 20% OFF</b> for your first Order </p>
+        <i class="fa-solid fa-xmark cursor-pointer noflash" id="offerClose"
+            style="color: #fcfcfc;margin-left: 10%;"></i>
+    </div>
+    <!-- Navbar -->
+    <nav class=" flex md:flex  justify-between items-center p-2 m-2 sticky top-0 z-50">
+        <h1 class="font-extrabold" style="font-size: 1.5em;font-family: Poppins, sans-serif;">Nostra</h1>
+        <div class="md:hidden"><i id="menuIcon" class="fa-solid fa-bars cursor-pointer noflash" style="color: #050505;"></i></div>
+        <ul class="hidden gap-10  md:flex ">
+            <li class="hover hover:underline"><a href="#home">Home</a></li>
+            <li class="hover hover:underline"><a href="#newArrival">New Arrival</a></li>
+            <li class="hover hover:underline"><a href="#mostWanted">Most Wanted</a></li>
+            <li class="hover hover:underline"><a href="collections.html" target="_blank">Collections</a></li>
+            <li class="hover hover:underline"><a href="contact.html" target="_blank">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Sidenav -->
+     <div id="sidenav" class="md:hidden transition-all duration-1000 relative" style="background-color: #1D232C;color: #E2E1E1;width: 60%;top: 0;height: 100vh;z-index: 51;position: fixed;left: -60%;" >
+        <div>
+            <i id="closeIcon" class="fa-solid fa-xmark absolute right-3 top-6 font-bold noflash hover hover:cursor-pointer" style="color: #f6f2f2;"></i>
+             <!-- <p id="closeIcon" class="text-right font-bold pr-3 pt-4 cursor-pointer">X</p> -->
+        </div>
+        <ul class="flex flex-col gap-7 pl-4 pt-10">
+            <li class="hover hover:underline"><a href="#home">Home</a></li>
+            <li class="hover hover:underline"><a href="#newArrival">New Arrival</a></li>
+            <li class="hover hover:underline"><a href="#mostWanted">Most Wanted</a></li>
+            <li class="hover hover:underline"><a href="collections.html">Collections</a></li>
+            <li class="hover hover:underline"><a href="contact.html" target="_blank">Contact Us</a></li>
+        </ul>
+     </div>
+
+    <!-- Main Container div -->
+
+    <div  id="home" class="mr-2 ml-2">
+
+        <div class="slider" style="overflow: hidden; position: relative; border-radius: 5px; width: 100vw;">
+            <!-- Left Button -->
+
+            <div class="slider-left-btn" style="position: absolute; top: 35%; left: 5%; z-index: 3; ">
+                <i class="fa-solid fa-angle-left noflashscale" style="color: white; font-size: 10vw;"></i>
+            </div>
+
+            <!-- <div class="slider-left-btn" style="position: absolute; top: 35%; left: 5%; z-index: 2;">
+                <i class="fa-solid fa-angle-left noflashscale cursor-pointer" style="color: white; font-size: 10vw;"></i>
+            </div> -->
+        
+            <!-- Slide Track (holds all slides) -->
+            <div class="slide-track" style="display: flex; width: 300vw; transition: transform 1.5s ease;">
+                <div class="slide-image-container" style="width: 100vw;">
+                    <img src="./images/slider-one.jpg" alt="Slide 1" style="width: 100%; display: block;">
+                </div>
+                <div class="slide-image-container" style="width: 100vw;">
+                    <img src="./images/slider-one.jpg" alt="Slide 2" style="width: 100%; display: block;">
+                </div>
+                <div class="slide-image-container" style="width: 100vw;">
+                    <img src="./images/slider-one.jpg" alt="Slide 3" style="width: 100%; display: block;">
+                </div>
+            </div>
+        
+            <!-- Overlay Content -->
+            <div class="slider-content" style="position: absolute; top: 20%; text-align: center; width: 100%; color: white; z-index: 2;">
+                <h1 style="font-size: 5vw; font-weight: bold;">Level up your style with our</h1>
+                <h4 class="font-bold">Summer Collections</h4>
+                <button style="margin-top: 10px; padding: 10px 15px; color: #0c0d0d;"class="bg-white ">Shop Now <i class="fa-solid fa-arrow-right noflash"></i></button>
+            </div>
+        
+            <!-- Right Button -->
+            <div class="slider-right-btn" style="position: absolute; top: 35%; right: 5%; z-index: 2; ">
+                <i class="fa-solid fa-angle-right noflashscale" style="color: white; font-size: 10vw;"></i>
+            </div>
+        </div>
+        
+
+        <!-- Brands section -->
+
+        <h2 style="font-size: 1.5em;font-weight: bold;" class="m-2 p-2">Brands</h2>
+        <div class="flex justify-between p-2" style="margin-top: 1vw;">
+            <div class=" flex flex-col text-center items-center" style="font-size: 2vw;">
+                <img src="./images/behance.png" alt="Brand Icon" class="mt-2" style="width: 4vw; align-items: center;">
+                <p>Puma</p>
+            </div>
+            <div class=" flex flex-col text-center items-center" style="font-size: 2vw;">
+                <img src="./images/adidas.png" alt="Brand Icon" class="mt-2" style="width: 4vw; align-items: center;">
+                <p>Adidas</p>
+            </div>
+            <div class=" flex flex-col text-center items-center" style="font-size: 2vw;">
+                <img src="./images/simple.png" alt="Brand Icon" class="mt-2" style="width: 4vw; align-items: center;">
+                <p>Simple</p>
+            </div>
+            <div class=" flex flex-col text-center items-center" style="font-size: 2vw;">
+                <img src="./images/leaves.png" alt="Brand Icon" class="mt-2" style="width: 4vw; align-items: center;">
+                <p>Leaves</p>
+            </div>
+            <div class=" flex flex-col text-center items-center" style="font-size: 2vw;">
+                <img src="./images/behance.png" alt="Brand Icon" class="mt-2" style="width: 4vw; align-items: center;">
+                <p>Puma</p>
+            </div>
+            <div class=" flex flex-col text-center items-center" style="font-size: 2vw;">
+                <img src="./images/twitch.png" alt="Brand Icon" class="mt-2" style="width: 4vw; align-items: center;">
+                <p>Twitch</p>
+            </div>
+            <div class="flex flex-col text-center items-center" style="font-size: 2vw;">
+                <img src="./images/leaves (1).png" alt="Brand Icon" class="mt-2"
+                    style="width: 4vw; align-items: center;">
+                <p>Leaves</p>
+            </div>
+        </div>
+
+        <!-- Customer Experinces section -->
+        <div>
+            <div class="servives-container-1 flex m-2 p-2 justify-between items-center " style="font-size: 1.5vw;">
+                <div>
+                    <h2 style="font-size: 1.5em; font-weight: bold;">We Provide Best</h2>
+                    <h2 style="font-size: 1.5em; font-weight: bold;">Customer Experiences</h2>
+                </div>
+
+                <div>
+                    <p style="font-size: 1.5vw;">|| We ensure that our customer have the best shopping experience</p>
+                </div>
+            </div>
+            <div class="service-container-2 m-2 p2 flex justify-between items-center" style="font-size: 1vw;gap: 10px;">
+                <div style="border-radius: 5px;background-color: #F2F4F7;padding: 10px;">
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-circle-check noflash"></i>
+                    <h4 style="font-weight: bold;">Original Products</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+
+                <div style="border-radius: 5px;background-color: #F2F4F7;padding: 10px;">
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-face-smile noflash"></i>
+                    <h4 style="font-weight: bold;">Satisfaction Guarantee</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+
+                <div style="border-radius: 5px;background-color: #F2F4F7;padding: 10px;">
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-solid fa-broom noflash"></i>
+                    <h4 style="font-weight: bold;">New Arrival Everyday</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+
+                <div style="border-radius: 5px;background-color: #F2F4F7;padding: 10px;">
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-solid fa-truck-fast noflash"></i>
+                    <h4 style="font-weight: bold;">Fast & Free Shipping</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- New Arrivals Section -->
+
+        <h2 style="font-size: 1.5em;font-weight: bold;" class="m-2 p-2">New Arrivals</h2>
+
+        <div class="flex justify-between p-2" style="margin-top: 2vw;" id="newArrival">
+            <div style="position: relative;">
+                <img src="./images/mw-1.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <div class="overlay"></div>
+                <button class="bg-white p-2 border rounded-xl "
+                    style="z-index:2;font-size: 1.2vw;margin-top: 10px;padding: 5% 10% 5% 10%;position:absolute;top: 50%;left: 18%;">Shop
+                    Now <i class="fa-solid fa-arrow-right noflash"></i></button>
+            </div>
+            <div style="position: relative;">
+                <img src="./images/mw-1.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <div class="overlay"></div>
+                <button class="bg-white p-2 border rounded-xl "
+                    style="z-index:2;font-size: 1.2vw;margin-top: 10px;padding: 5% 10% 5% 10%;position:absolute;top: 50%;left: 18%;">Shop
+                    Now <i class="fa-solid fa-arrow-right noflash"></i></button>
+            </div>
+            <div style="position: relative;">
+                <img src="./images/mw-1.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <div class="overlay"></div>
+                <button class="bg-white p-2 border rounded-xl "
+                    style="z-index:2;font-size: 1.2vw;margin-top: 10px;padding: 5% 10% 5% 10%;position:absolute;top: 50%;left: 18%;">Shop
+                    Now <i class="fa-solid fa-arrow-right noflash"></i></button>
+            </div>
+            <div style="position: relative;">
+                <img src="./images/mw-1.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <div class="overlay"></div>
+                <button class="bg-white p-2 border rounded-xl "
+                    style="z-index:2;font-size: 1.2vw;margin-top: 10px;padding: 5% 10% 5% 10%;position:absolute;top: 50%;left: 18%;">Shop
+                    Now <i class="fa-solid fa-arrow-right noflash"></i></button>
+            </div>
+
+
+        </div>
+        <!-- Most wanted section -->
+
+        <h2 style="font-size: 1.5em;font-weight: bold;" class="m-2 p-2">Most Wanted</h2>
+        <div id="mostWanted" class="flex justify-between p-3"
+            style="margin-top: 1vw;gap: 20px;overflow-x: scroll;unicode-bidi: isolate;white-space: nowrap;scrollbar-width: none; -ms-overflow-style: none;">
+            <div class="flex-shrink-0" style="position: relative;unicode-bidi: isolate;">
+                <img src="./images/mw-1.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <i class="fa-regular fa-heart noflash text-2xl"
+                    style="color: #0a0a0b;position: absolute;width: 15%;bottom: 5%;right: 2%;"></i>
+                <p style="position: absolute;top: 3px;left:3px; color:white;font-size: 2vw;border-radius: 10%;"
+                    class="pl-2 pr-2 bg-red-600 font-semibold">Sale</p>
+            </div>
+            <div class="flex-shrink-0" style="position: relative;unicode-bidi: isolate;">
+                <img src="./images/mw-2.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <i class="fa-regular fa-heart noflash text-2xl"
+                    style="color: #0a0a0b;position: absolute;width: 15%;bottom: 5%;right: 2%;"></i>
+                <p style="position: absolute;top: 3px;left:3px; color:white;font-size: 2vw;border-radius: 10%;"
+                    class="pl-2 pr-2 bg-red-600 font-semibold">Sale</p>
+            </div>
+            <div class="flex-shrink-0" style="position: relative;unicode-bidi: isolate;">
+                <img src="./images/mw-3.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <i class="fa-regular fa-heart noflash text-2xl"
+                    style="color: #0a0a0b;position: absolute;width: 15%;bottom: 5%;right: 2%;"></i>
+                <p style="position: absolute;top: 3px;left:3px; color:white;font-size: 2vw;border-radius: 10%;"
+                    class="pl-2 pr-2 bg-red-600 font-semibold">Sale</p>
+            </div>
+            <div class="flex-shrink-0" style="position: relative;unicode-bidi: isolate;">
+                <img src="./images/mw-4.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <i class="fa-regular fa-heart noflash text-2xl"
+                    style="color: #0a0a0b;position: absolute;width: 15%;bottom: 5%;right: 2%;"></i>
+                <p style="position: absolute;top: 3px;left:3px; color:white;font-size: 2vw;border-radius: 10%;"
+                    class="pl-2 pr-2 bg-red-600 font-semibold">Sale</p>
+            </div>
+            <div class="flex-shrink-0" style="position: relative;unicode-bidi: isolate;">
+                <img src="./images/mw-5.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <i class="fa-regular fa-heart noflash text-2xl"
+                    style="color: #0a0a0b;position: absolute;width: 15%;bottom: 5%;right: 2%;"></i>
+                <p style="position: absolute;top: 3px;left:3px; color:white;font-size: 2vw;border-radius: 10%;"
+                    class="pl-2 pr-2 bg-red-600 font-semibold">Sale</p>
+            </div>
+            <div class="flex-shrink-0" style="position: relative;unicode-bidi: isolate;">
+                <img src="./images/mw-6.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <i class="fa-regular fa-heart noflash text-2xl"
+                    style="color: #0a0a0b;position: absolute;width: 15%;bottom: 5%;right: 2%;"></i>
+                <p style="position: absolute;top: 3px;left:3px; color:white;font-size: 2vw;border-radius: 10%;"
+                    class="pl-2 pr-2 bg-red-600 font-semibold">Sale</p>
+            </div>
+            <div class="flex-shrink-0" style="position: relative;unicode-bidi: isolate;">
+                <img src="./images/mw-7.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <i class="fa-regular fa-heart noflash text-2xl"
+                    style="color: #0a0a0b;position: absolute;width: 15%;bottom: 5%;right: 2%;"></i>
+                <p style="position: absolute;top: 3px;left:3px; color:white;font-size: 2vw;border-radius: 10%;"
+                    class="pl-2 pr-2 bg-red-600 font-semibold">Sale</p>
+            </div>
+            <div class="flex-shrink-0" style="position: relative;unicode-bidi: isolate;">
+                <img src="./images/mw-8.jpg" alt="" style="width: 20vw;border-radius: 2%;">
+                <i class="fa-regular fa-heart noflash text-2xl"
+                    style="color: #0a0a0b;position: absolute;width: 15%;bottom: 5%;right: 2%;"></i>
+                <p style="position: absolute;top: 3px;left:3px; color:white;font-size: 2vw;border-radius: 10%;"
+                    class="pl-2 pr-2 bg-red-600 font-semibold">Sale</p>
+            </div>
+        </div>
+
+
+        <!-- Limited offer section -->
+
+        <div class="flex p-6 justify-center items-center gap-6 m-4" style="background-color: #1D232C;font-size: 2vw;">
+            <div>
+                <img src="./images/offer.jpg" alt="">
+            </div>
+            <div>
+                <h2 class="font-bold" style="color: #F0F0F0;">Limited Offer </h2>
+                <h4 class="font-bold" style="color: #F0F0F0;">35% OFF on this for the first 30 Customers</h4>
+                <button style="background-color: #F0F0F0;" class="p-1 mt-5 border rounded-xl">Shop Now <i
+                        class="fa-solid fa-arrow-right" style="color:black;"></i></button>
+            </div>
+        </div>
+
+        <!-- Newsletter section -->
+
+        <div class="flex flex-col items-center gap-2" style="margin-top: 5vw;">
+            <h1 class=" font-bold" style="font-size:1.5em;">Join our Newsletter</h1>
+            <p class="text-center">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+            <input type="email" name="" id="" placeholder="Enter Email" class="w-4/5 p-2 mb-4"
+                style="border: solid #1D232C 3px;">
+            <button class="p-2 rounded-lg"
+                style="background-color: #1D232C; color: #E2E1E1; font-size: 1.8vw;">Subscribe <i
+                    class="fa-solid fa-arrow-right" style="color:#E2E1E1;"></i> </button>
+        </div>
+    </div>
+
+    <!-- Footer div -->
+
+    <div
+        style="font-size: 2vw;margin-bottom: 0;margin-top: 5vw; padding: 40px;background-color: #1D232C;color: #E2E1E1;box-sizing: border-box;">
+        <h1 class="text-3xl font-bold" style="font-family: 'Poppins', sans-serif;">Nostra</h1>
+        <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p>
+        <!-- Social media hanldes -->
+        <div class="flex flex-row gap-16 mt-4">
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram noflash" style="color: #fbfcfe;"></i></a>
+            <a href="https://x.com/"><i class="fa-brands fa-x-twitter noflash" style="color: #f7f9fd;"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f noflash" style="color: #f6f7f9;"></i></a>
+        </div>
+        <p class="mt-2">@ 2023 Nostra.com</p>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="./images/contactfavicon.png" type="image/png">
+    <!--CSS-->
+    <link rel="stylesheet" href="contact.css">
+
+    <!--Tailwind CSS cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eater&family=Fontdiner+Swanky&family=Henny+Penny&family=Zeyada&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    
+    <!-- Navbar -->
+    <nav class=" flex md:flex  justify-between items-center p-2 m-2 sticky top-0 z-50">
+        <h1 class="font-extrabold" style="font-size: 1.5em;font-family: Poppins, sans-serif;">Nostra</h1>
+        <div class="md:hidden"><i id="menuIcon" class="fa-solid fa-bars cursor-pointer noflash" style="color: #050505;"></i></div>
+        <ul class="hidden gap-10  md:flex ">
+            <li class="hover hover:underline"><a href="index.html">Home</a></li>
+            <li class="hover hover:underline"><a href="index.html#newArrival">New Arrival</a></li>
+            <li class="hover hover:underline"><a href="index.html#mostWanted">Most Wanted</a></li>
+            <li class="hover hover:underline"><a href="collections.html " target="_blank">Collections</a></li>
+            
+        </ul>
+    </nav>
+     <!-- Sidenav -->
+     <div id="sidenav" class="md:hidden transition-all duration-1000 relative" style="background-color: #1D232C;color: #E2E1E1;width: 60%;top: 0;height: 100vh;z-index: 51;position: fixed;left: -60%;" >
+        <div>
+            <i id="closeIcon" class="fa-solid fa-xmark absolute right-3 top-6 font-bold noflash hover hover:cursor-pointer" style="color: #f6f2f2;"></i>
+            <!-- <p id="closeIcon" class="text-right font-bold p-2 m-2 cursor-pointer">X</p> -->
+        </div>
+        <ul class="flex flex-col gap-7 pl-4 pt-10">
+            <li class="hover hover:underline"><a href="index.html#home">Home</a></li>
+            <li class="hover hover:underline"><a href="index.html#newArrival">New Arrival</a></li>
+            <li class="hover hover:underline"><a href="index.html#mostWanted">Most Wanted</a></li>
+            <li class="hover hover:underline"><a href="collections.html">Collections</a></li>
+            <li class="hover hover:underline"><a href="contact.html" target="_blank">Contact Us</a></li>
+        </ul>
+     </div>
+
+     <!-- Contact Form -->
+
+     <div style="padding-left: 15px; padding-right: 15px;">
+        <div class="contact-form">
+            <h2 style="margin-bottom: 1vw;font-size: 1.5em;font-weight: bold;">Contact Us</h2>
+            
+              <label for="name">Name:</label>
+              <input type="text" id="nameInput" name="name" required="" autofocus >
+              
+              <label for="email">Email:</label>
+              <input type="email" id="emailInput" name="email" required="">
+              
+              <label for="message">Message:</label>
+              <textarea id="textArea" name="message" required=""></textarea>
+              
+              <input type="submit" id="submitBtn" value="Submit" style="background-color: #0056B3; padding: 10px 20px;font-size: 16px;border-radius: 4px;">
+            
+          </div>
+     </div>
+
+      <!-- Newsletter section -->
+
+      <div class="flex flex-col items-center gap-2" style="margin-top: 5vw;">
+        <h1 class=" font-bold" style="font-size:1.5em;">Join our Newsletter</h1>
+        <p class="text-center">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+        <input type="email" name="" id="" placeholder="Enter Email" class="w-4/5 p-2 mb-4"
+            style="border: solid #1D232C 3px;">
+        <button class="p-2 rounded-lg"
+            style="background-color: #1D232C; color: #E2E1E1; font-size: 1.8vw;">Subscribe <i
+                class="fa-solid fa-arrow-right" style="color:#E2E1E1;"></i> </button>
+    </div>
+</div>
+
+<!-- Footer div -->
+
+<div
+    style="font-size: 2vw;margin-bottom: 0;margin-top: 5vw; padding: 40px;background-color: #1D232C;color: #E2E1E1;box-sizing: border-box;">
+    <h1 class="text-3xl font-bold" style="font-family: 'Poppins', sans-serif;">Nostra</h1>
+    <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p>
+    <!-- Social media hanldes -->
+    <div class="flex flex-row gap-16 mt-4">
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram noflash" style="color: #fbfcfe;"></i></a>
+        <a href="https://x.com/"><i class="fa-brands fa-x-twitter noflash" style="color: #f7f9fd;"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f noflash" style="color: #f6f7f9;"></i></a>
+    </div>
+    <p class="mt-2">@ 2023 Nostra.com</p>
+</div>
+
+<!-- Script -->
+ <script src="contact.js"></script>
+</body>

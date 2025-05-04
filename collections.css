@@ -1,0 +1,57 @@
+i {
+    animation: flash 2s infinite;
+}
+
+.noflash {
+    animation: none;
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.noflash:hover {
+    transform: scale(1.2);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.divide-section{
+    display: flex;
+}
+
+.vertical-line{
+    border: none;
+    border-left: 3px solid #1D232C;
+    height: 100%;
+    margin: 0 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.product-section{
+    padding: 10px;
+    flex-basis: 75%;
+    position: relative;
+}
+
+.navbar-search{
+    border: solid #1D232C 1px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+.products{
+    margin-top: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1vw;
+}
